@@ -15,17 +15,16 @@ const SideNav = (() => {
   };
 
   const toggleSideMenu = () => {
-    if (document.querySelector('#side-menu-back').style.display === 'none') {
+    // if (document.querySelector('#side-menu-back').style.display === 'none') {
+    if (document.querySelector('#side-menu-back').style.height === '0vh') {
       document.querySelector('#side-menu').style.width = '250px';
       // will display an overlay that prevents users from interacting with ui underneath the menu
-      document.querySelector('#side-menu-back').style.display = 'block';
-      // will slide main content to the right
-      // document.querySelector('#main').style.marginLeft = '250px';
+      // document.querySelector('#side-menu-back').style.display = 'block';
+      document.querySelector('#side-menu-back').style.height = '100vh';
     } else {
       document.querySelector('#side-menu').style.width = '0';
-      document.querySelector('#side-menu-back').style.display = 'none';
-      // will slide main content back to the left
-      // document.querySelector('#main').style.marginLeft = '0px';
+      // document.querySelector('#side-menu-back').style.display = 'none';
+      document.querySelector('#side-menu-back').style.height = '0vh';
     }
   };
 
